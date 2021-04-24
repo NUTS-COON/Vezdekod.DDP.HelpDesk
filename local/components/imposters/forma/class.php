@@ -8,7 +8,7 @@ use Bitrix\Main\Loader;
 class MessageForm extends \CBitrixComponent
 {
     private function validData($request){
-        if(strlen($request['fio']) < 6 || strlen($request['phone']) < 16 || strlen($request['text']) < 10)
+        if(strlen($request['fio']) < 6 || strlen($request['phone']) < 6 || strlen($request['text']) < 10)
             return false;
         else
             return true;
@@ -22,7 +22,8 @@ class MessageForm extends \CBitrixComponent
             'FIO' => htmlspecialchars($request['fio']),
             'PHONE' => htmlspecialchars($request['phone']),
             'TEXT' => htmlspecialchars($request['text']),
-            "DATE_NEW" => ConvertTimeStamp(time(), 'FULL')
+            "DATE_NEW" => ConvertTimeStamp(time(), 'FULL'),
+            'STATUS' => Helpdesk\Props::getPropertyStatus()['new']['ID']
         ];
 
         $arLoadProductArray = Array(
