@@ -8,7 +8,8 @@ use Bitrix\Main\Page\Asset;
     global $APPLICATION;
     $APPLICATION->ShowHead();
     Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . "/css/reset.css");
-    //Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/fix.js");
+    Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/vue.global.js");
+    Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/axios.min.js");
     ?>
     <title><? $APPLICATION->ShowTitle() ?></title>
 </head>
