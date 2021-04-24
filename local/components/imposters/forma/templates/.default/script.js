@@ -1,9 +1,9 @@
 const FormaApp = {
     data() {
         return {
-            fio: null,
-            phone: null,
-            text: null,
+            fio: '',
+            phone: '',
+            text: '',
             id: null,
             errors: {
                 fio: false,
