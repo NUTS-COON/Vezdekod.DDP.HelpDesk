@@ -15,7 +15,7 @@ use Bitrix\Main\Page\Asset;
     ?>
     <title><? $APPLICATION->ShowTitle() ?></title>
 </head>
-
+<? $APPLICATION->ShowPanel(); ?>
 <body>
 <header class="header">
     <a href="/"><h1>Helpdesk</h1></a>
