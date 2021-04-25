@@ -38,7 +38,7 @@ class MessageList extends \CBitrixComponent
     private function getItems($params){
         Loader::includeModule("iblock");
         $messages = [];
-        $arSelect = Array("ID", "PROPERTY_STATUS", "PROPERTY_FIO", "PROPERTY_PHONE", "PROPERTY_DATE_NEW", "PROPERTY_DATE_END");
+        $arSelect = Array("ID", "DETAIL_PAGE_URL", "PROPERTY_STATUS", "PROPERTY_FIO", "PROPERTY_PHONE", "PROPERTY_DATE_NEW", "PROPERTY_DATE_END");
         $arFilter = Array("IBLOCK_ID" => MESSAGE_IBLOCK_ID, "ACTIVE"=>"Y");
         if($params['status'])
             $arFilter['PROPERTY_STATUS_VALUE'] = $params['status'];
@@ -49,7 +49,7 @@ class MessageList extends \CBitrixComponent
         $this->arResult['NAV']['NavPageCount'] = $res->NavPageCount;
         $this->arResult['NAV']['NavNum'] = $res->NavNum;
         $this->arResult['NAV']['NavRecordCount'] = $res->NavRecordCount;
-        while($message = $res->Fetch())
+        while($message = $res->GetNext())
         {
             $messages[] = $message;
         }

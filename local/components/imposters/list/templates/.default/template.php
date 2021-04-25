@@ -42,7 +42,7 @@ if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true)
                     <th>Статус</th>
                 </tr>
                 <tr v-for="item in arResult.ITEMS" :key="item.ID">
-                    <td>{{ item.ID }}</td>
+                    <td><a :href="item.DETAIL_PAGE_URL">{{ item.ID }}</a></td>
                     <td>{{ item.PROPERTY_DATE_NEW_VALUE }}</td>
                     <td>{{ item.PROPERTY_DATE_END_VALUE }}</td>
                     <td>{{ item.PROPERTY_FIO_VALUE }}</td>

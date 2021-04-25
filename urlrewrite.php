@@ -56,4 +56,13 @@ $arUrlRewrite=array (
     'PATH' => '/bitrix/services/rest/index.php',
     'SORT' => 100,
   ),
+15 =>
+    array (
+        'CONDITION' => '#^/board/([_\\0-9]+)(index\\.php)*(\\?.*)*$#',
+        'RULE' => '',
+        'ID' => '',
+        'PATH' => '/board/detail.php',
+        'SORT' => 100,
+    ),
+
 );
