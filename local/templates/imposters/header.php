@@ -8,6 +8,8 @@ use Bitrix\Main\Page\Asset;
     global $APPLICATION;
     $APPLICATION->ShowHead();
     Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . "/css/reset.css");
+    Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . "/css/header.css");
+    Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . "/css/footer.css");
     Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/vue.global.js");
     Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/axios.min.js");
     ?>
@@ -16,6 +18,7 @@ use Bitrix\Main\Page\Asset;
 
 <body>
 <? $APPLICATION->ShowPanel(); ?>
-<header>
+<header class="header">
     <h1>Helpdesk</h1>
+    <a href="/board/">Я сотрудник</a>
 </header>
