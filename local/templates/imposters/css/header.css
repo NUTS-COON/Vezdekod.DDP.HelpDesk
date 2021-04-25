@@ -34,7 +34,7 @@
     height: calc(100% - 74px);
 }
 [v-cloak] {
-    display: none;
+    display: none !important;
 }
 .error{
     border: 1px solid red;
