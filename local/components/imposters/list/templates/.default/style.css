@@ -5,13 +5,16 @@
     box-sizing: border-box;
     margin: 10px;
 }
+.search{
+    display: flex;
+    flex-direction: column;
+}
 .set-elem{
     display: flex;
-    justify-content: space-between;
-    width: 280px;
+    width: 250px;
 }
-.set-elem .choose{
-    width: 200px;
+.choose{
+    width: 120px;
 }
 .set-el, .settings > h3, a[href="/board/"]{
     margin-bottom: 5px;
@@ -31,17 +34,39 @@
 .page-elements .ten{
     flex-direction: row-reverse;
 }
-a[href="/board/"]{
+.count-of-elements{
+    width: 50px;
+}
+.free{
+    width: 150px;
     color: #000;
 }
 .table-container{
-    width: 70%;
+    display: flex;
+    margin-bottom: 50px;
+    justify-content: center;
+    width: 100%;
+}
+.table{
+    border-collapse: collapse;
+    border: 1px solid grey;
+    padding: 10px;
+    width: 60%;
 }
 .first-string > th{
     margin: 0 40px 5px 0;
 }
+.same > th, .same > td{
+    border: 1px solid grey;
+    padding: 5px;
+}
+
 .mt20{
-    margin-top: 20px;
+    margin-top: 5px;
+    display: flex;
+    width: 120px;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 .search{
     display: flex;

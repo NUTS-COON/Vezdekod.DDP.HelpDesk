@@ -29,13 +29,13 @@ if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true)
                     <option>20</option>
                     <option>50</option>
                 </select>
-                <a href="/board/">Сбросить все</a>
+                <a class="free" href="/board/">Сбросить все</a>
             </div>
         </div>
         <div class="table-container" v-if="this.arResult.ITEMS">
             <table class="table">
                 <tbody class="tbody">
-                <tr class="first-string">
+                <tr class="first-string same">
                     <th>ID</th>
                     <th>Дата открытия</th>
                     <th>Дата закрытия</th>
@@ -43,7 +43,7 @@ if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true)
                     <th>Номер телефона</th>
                     <th>Статус</th>
                 </tr>
-                <tr class="all-another" v-for="item in arResult.ITEMS" :key="item.ID">
+                <tr class="all-another same" v-for="item in arResult.ITEMS" :key="item.ID">
                     <td><a :href="item.DETAIL_PAGE_URL">{{ item.ID }}</a></td>
                     <td>{{ item.PROPERTY_DATE_NEW_VALUE }}</td>
                     <td>{{ item.PROPERTY_DATE_END_VALUE }}</td>

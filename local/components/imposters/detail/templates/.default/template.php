@@ -5,7 +5,7 @@ if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true)
 }
 ?>
 <section>
-    <div id="detailApp" v-cloak>
+    <div id="detailApp" v-cloak class="container">
         <h2>Обращение №{{ arResult.ELEMENT.ID }}</h2>
         <ul>
             <li>ФИО: {{ arResult.ELEMENT.PROPERTY_FIO_VALUE }}</li>
@@ -21,8 +21,8 @@ if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true)
         <div>
             <h3 v-if="(arResult.ELEMENT.PROPERTY_STATUS_VALUE != 'Завершено')">Добавить/редактировать комментарий</h3>
             <h3 v-else>Комментарий</h3>
-            <form v-on:submit.prevent="onSubmit">
-                <textarea :disabled="(arResult.ELEMENT.PROPERTY_STATUS_VALUE == 'Завершено')" v-model="arResult.COMMENT" rows="10"></textarea>
+            <form class="form" v-on:submit.prevent="onSubmit">
+                <textarea class="comment" :disabled="(arResult.ELEMENT.PROPERTY_STATUS_VALUE == 'Завершено')" v-model="arResult.COMMENT" rows="10"></textarea>
                 <input :disabled="(arResult.ELEMENT.PROPERTY_STATUS_VALUE == 'Завершено')" type="submit">
             </form>
         </div>
