@@ -32,7 +32,7 @@ const FormaApp = {
             }
         },
         phoneInput(e){
-            this.phone = this.phone.replace( /(?!\d|\(|\)|\+|-|\s)./g, '')
+            this.phone = this.phone.replace( /(?!\d|\+)./g, '')
         },
         validate(){
             let valid = true
