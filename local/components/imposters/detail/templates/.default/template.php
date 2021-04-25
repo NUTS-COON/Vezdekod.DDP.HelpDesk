@@ -26,7 +26,7 @@ if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true)
                 <input :disabled="(arResult.ELEMENT.PROPERTY_STATUS_VALUE == 'Завершено')" type="submit">
             </form>
         </div>
-        <button v-on:click="endMessage">Завершить обращение</button>
+        <button v-if="(arResult.ELEMENT.PROPERTY_STATUS_VALUE != 'Завершено')" v-on:click="endMessage">Завершить обращение</button>
     </div>
 </section>
 <?php
