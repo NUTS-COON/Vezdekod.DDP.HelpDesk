@@ -17,8 +17,7 @@ use Bitrix\Main\Page\Asset;
 </head>
 
 <body>
-<? $APPLICATION->ShowPanel(); ?>
 <header class="header">
-    <h1>Helpdesk</h1>
+    <a href="/"><h1>Helpdesk</h1></a>
     <a href="/board/">Я сотрудник</a>
 </header>
