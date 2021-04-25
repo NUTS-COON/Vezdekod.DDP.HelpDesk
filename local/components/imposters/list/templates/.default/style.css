@@ -1,3 +1,57 @@
 [v-cloak]{
     display: none;
 }
+.container{
+    display: flex;
+    height: 100%;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    margin-top: -68px;
+}
+.settings{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    box-sizing: border-box;
+    margin: 10px;
+}
+.set-elem{
+    display: flex;
+    justify-content: space-between;
+    width: 280px;
+}
+.set-elem .choose{
+    width: 200px;
+}
+.set-el, .settings > h3, a[href="/board/"]{
+    margin-bottom: 5px;
+}
+.page-elements{
+    display: flex;
+    justify-content: space-between;
+    width: 80px;
+    margin-top: 5px;
+}
+.page-elements .num-page{
+    padding-right: 3px;
+    width: 30px;
+    text-decoration: none;
+    color: #000;
+}
+.num-page:hover, a[href="/board/"]:hover{
+    color: #69188f;
+}
+.page-elements .ten{
+    flex-direction: row-reverse;
+}
+a[href="/board/"]{
+    text-decoration: none;
+    color: #000;
+}
+.table-container{
+    width: 70%;
+}
+.first-string > th{
+    margin: 0 40px 5px 0;
+}

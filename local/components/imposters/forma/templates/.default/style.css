@@ -3,20 +3,22 @@
 }
 .container{
     display: flex;
-    height: 70%;
-    flex-direction: column;
-    align-items: center;
+    height: 100%;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    margin-top: -70px;
 }
 .form{
+    width: 60%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding: 10px;
-    margin: auto;
     background-color: #828282;
     border: 2px solid #333;
     border-radius: 10px;
-    width: 60%;
+    box-sizing: border-box;
 }
 .form > input {
     margin-bottom: 10px;
@@ -33,7 +35,16 @@
 :focus{
     outline: -webkit-focus-ring-color auto 0;
 }
-
+.massage{
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
 .massage > p {
-    margin-top: 5px;
+    border: 1px solid #333333;
+    width: 420px;
+    padding: 1px;
+    margin: 5px auto 0 auto;
 }
