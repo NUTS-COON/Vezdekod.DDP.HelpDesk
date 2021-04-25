@@ -18,14 +18,11 @@
 }
 .page-elements{
     display: flex;
-    justify-content: space-between;
-    width: 80px;
-    margin-top: 5px;
+    justify-content: space-evenly;
 }
 .page-elements .num-page{
     padding-right: 3px;
     width: 30px;
-    text-decoration: none;
     color: #000;
 }
 .num-page:hover, a[href="/board/"]:hover{
@@ -35,7 +32,6 @@
     flex-direction: row-reverse;
 }
 a[href="/board/"]{
-    text-decoration: none;
     color: #000;
 }
 .table-container{
@@ -43,4 +39,12 @@ a[href="/board/"]{
 }
 .first-string > th{
     margin: 0 40px 5px 0;
+}
+.mt20{
+    margin-top: 20px;
+}
+.search{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
 }

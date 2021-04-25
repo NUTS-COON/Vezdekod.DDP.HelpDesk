@@ -8,29 +8,29 @@ if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true)
     <div id="listApp" v-cloak class="container">
         <div class="settings">
             <h3>Всего элементов {{ arResult.NAV.NavRecordCount }}</h3>
-            <div class="search">
+            <div class="search mt20">
                 <form class="set-elem" v-on:submit.prevent="reload">
                     <input class="choose" type="text" v-model="arResult.PARAMS.id" placeholder="Поиск по ID" v-on:input="inputID">
                     <input type="submit" value="Найти">
                 </form>
+                <div class="status set-elem">
+                    <select class="choose" v-model="arResult.PARAMS.status" v-on:change="reload">
+                        <option disabled value="">Выберите один из вариантов</option>
+                        <option v-for="status in arResult.STATUSES" :key="status.ID">{{ status.VALUE }}</option>
+                    </select>
+                </div>
             </div>
-            <div class="status set-elem">
-                <select class="choose" v-model="arResult.PARAMS.status" v-on:change="reload">
-                    <option disabled value="">Выберите один из вариантов</option>
-                    <option v-for="status in arResult.STATUSES" :key="status.ID">{{ status.VALUE }}</option>
-                </select>
-            </div>
-            <div class="page-elements">
+            <div class="page-elements mt20">
                 <div v-if="(arResult.NAV.NavPageCount != 1)" class="pages set-el">
-                    <a href="" class="num-page" v-for="n in arResult.NAV.NavPageCount" v-on:click.prevent="arResult.PARAMS.page = n; reload()">{{ n }}</a>
+                    <a :style="(arResult.PARAMS.page == n)?'color:red':''" href="" class="num-page" v-for="n in arResult.NAV.NavPageCount" v-on:click.prevent="arResult.PARAMS.page = n; reload()">{{ n }}</a>
                 </div>
                 <select v-model="arResult.PARAMS.sumPage" v-on:change="reload" class="count-of-elements set-el">
                     <option class="ten">10</option>
                     <option>20</option>
                     <option>50</option>
                 </select>
+                <a href="/board/">Сбросить все</a>
             </div>
-            <a href="/board/">Сбросить все</a>
         </div>
         <div class="table-container" v-if="this.arResult.ITEMS">
             <table class="table">
